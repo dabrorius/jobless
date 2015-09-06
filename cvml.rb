@@ -65,6 +65,8 @@ module CVML
       item.instance_eval &block
       @items.push item
     end
+
+    alias_method :entry, :item
   end
 
   class Item
@@ -75,7 +77,7 @@ module CVML
     end
 
     # Define methods for setting personal data
-    %w(position time_span description).each do |attribute_name|
+    %w(title company technologies description start_date end_date).each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
@@ -99,27 +101,9 @@ CV do
   email "dabrorius@gmail.com"
 
   employment do
-    item do
-      position "Rails developer"
-      description "It was very cool"
-    end
-  end
-
-  education do
-    item do
-      position "Bahelor dagree"
-      description "It was very cool"
-    end
-    item do
-      position "Master's dagree"
-      description "It was very cool"
-    end
-  end
-
-  open_source do
-    item do
-      position "Rails developer"
-      description "It was very cool"
+    entry do
+      title "Rails developer"
+      company "It was very cool"
     end
   end
 end
