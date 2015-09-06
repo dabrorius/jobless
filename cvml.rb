@@ -26,6 +26,22 @@ module CVML
       @groups.push group
     end
 
+    def employment(&block)
+      group("Employment", &block)
+    end
+
+    def education(&block)
+      group("Education", &block)
+    end
+
+    def open_source(&block)
+      group("Open source contributions", &block)
+    end
+
+    def other_experience(&block)
+      group("Other experience", &block)
+    end
+
     def write_to_file(filename)
       renderer = ERB.new(File.read("template.html.erb"))
       generated_html = renderer.result(binding)
@@ -80,7 +96,26 @@ include CVML
 CV do
   name "Filip Defar"
   email "dabrorius@gmail.com"
-  group "Work experience" do
+
+  employment do
+    item do
+      position "Rails developer"
+      description "It was very cool"
+    end
+  end
+
+  education do
+    item do
+      position "Bahelor dagree"
+      description "It was very cool"
+    end
+    item do
+      position "Master's dagree"
+      description "It was very cool"
+    end
+  end
+
+  open_source do
     item do
       position "Rails developer"
       description "It was very cool"
