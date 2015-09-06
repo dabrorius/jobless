@@ -88,7 +88,7 @@ module CVML
     end
   end
 
-  def CV(filename = "cv.html", &block)
+  def self.create(filename = "cv.html", &block)
     instance = Document.new
     instance.instance_eval &block
     instance.write_to_file(filename)

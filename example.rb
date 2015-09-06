@@ -1,7 +1,6 @@
 require_relative 'cvml'
-include CVML
 
-CV do
+CVML.create do
   name "Filip Defar"
   email "dabrorius@gmail.com"
   location "Zagreb, Croatia"
