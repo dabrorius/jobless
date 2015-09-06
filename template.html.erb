@@ -1,2 +1,13 @@
 <h1><%= @data[:personal_data][:name] %></h1>
-<h1><%= @data[:personal_data][:email] %></h1>
+<h2><%= @data[:personal_data][:email] %></h2>
+
+<% @data[:groups].each do |group| %>
+  <h3> <%= group.name %> </h3>
+  <% group.items.each do |item| %>
+    <hr>
+    <%= item.position %> <br/>
+    <%= item.description %>
+  <% end %>
+<% end %>
+
+
