@@ -20,26 +20,26 @@ module CVML
       end
     end
 
-    def group(name, &block)
-      group = Group.new(name)
+    def group(name, type=nil, &block)
+      group = Group.new(name, type)
       group.instance_eval &block
       @groups.push group
     end
 
     def employment(&block)
-      group("Employment", &block)
+      group("Employment", :employment, &block)
     end
 
     def education(&block)
-      group("Education", &block)
+      group("Education", :education, &block)
     end
 
     def open_source(&block)
-      group("Open source contributions", &block)
+      group("Open source contributions", :open_source, &block)
     end
 
     def other_experience(&block)
-      group("Other experience", &block)
+      group("Other experience", :other_experience, &block)
     end
 
     def write_to_file(filename)
@@ -52,10 +52,11 @@ module CVML
   end
 
   class Group
-    attr_reader :items, :name
+    attr_reader :items, :name, :type
 
-    def initialize(name)
+    def initialize(name, type=nil)
       @name = name
+      @type = type
       @items = []
     end
 
