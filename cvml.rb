@@ -88,22 +88,10 @@ module CVML
     end
   end
 
-  def CV(&block)
+  def CV(filename = "cv.html", &block)
     instance = Document.new
     instance.instance_eval &block
-    instance.write_to_file("result_cv.html")
+    instance.write_to_file(filename)
   end
 end
 
-include CVML
-CV do
-  name "Filip Defar"
-  email "dabrorius@gmail.com"
-
-  employment do
-    entry do
-      title "Rails developer"
-      company "It was very cool"
-    end
-  end
-end
