@@ -1,7 +1,7 @@
-<h1><%= @data[:personal_data][:name] %></h1>
-<h2><%= @data[:personal_data][:email] %></h2>
+<h1><%= name %></h1>
+<h2><%= email %></h2>
 
-<% @data[:groups].each do |group| %>
+<% groups.each do |group| %>
   <h3> <%= group.name %> </h3>
   <% group.items.each do |item| %>
     <hr>
