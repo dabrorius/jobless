@@ -1,6 +1,6 @@
 require 'erb'
 
-module CVML
+module Jobless
   class Document
     attr_reader :groups
 
@@ -50,48 +50,4 @@ module CVML
       end
     end
   end
-
-  class Group
-    attr_reader :items, :name, :type
-
-    def initialize(name, type=nil)
-      @name = name
-      @type = type
-      @items = []
-    end
-
-    def item(&block)
-      item = Item.new
-      item.instance_eval &block
-      @items.push item
-    end
-
-    alias_method :entry, :item
-  end
-
-  class Item
-    attr_reader :data
-
-    def initialize
-      @data = {}
-    end
-
-    # Define methods for setting personal data
-    %w(title company homepage technologies description start_date end_date).each do |attribute_name|
-      define_method(attribute_name) do |attribute=nil|
-        if attribute
-          @data[attribute_name.to_sym] = attribute
-        else
-          @data[attribute_name.to_sym]
-        end
-      end
-    end
-  end
-
-  def self.create(filename = "cv.html", &block)
-    instance = Document.new
-    instance.instance_eval &block
-    instance.write_to_file(filename)
-  end
 end
-
