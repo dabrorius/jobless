@@ -4,6 +4,7 @@ Jobless.cv do
   name "Filip Defar"
   email "dabrorius@gmail.com"
   location "Zagreb, Croatia"
+  address "John doe street"
   homepage "http://dabrorius.github.io"
 
   employment do

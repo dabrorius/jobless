@@ -53,9 +53,10 @@
   <body>
     <h1><%= name %></h1>
     <div class="personal-info">
-      <%= email %></br>
-      <%= location %></br>
-      <a href="<%= homepage %>"><%= homepage %></a>
+      <% if email %><%= email %></br><% end %>
+      <% if location %><%= location %></br><% end %>
+      <% if address %><%= address %></br><% end %>
+      <% if homepage %><a href="<%= homepage %>"><%= homepage %></a><% end %>
     </div>
     <div style="clear:both;"></div>
 
