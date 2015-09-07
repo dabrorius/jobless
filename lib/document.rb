@@ -43,7 +43,8 @@ module Jobless
     end
 
     def write_to_file(filename)
-      renderer = ERB.new(File.read("template.html.erb"))
+      template_path = File.expand_path("../template.html.erb", __FILE__)
+      renderer = ERB.new(File.read(template_path))
       generated_html = renderer.result(binding)
       File.open(filename, 'w') do |file|
         file.write(generated_html)

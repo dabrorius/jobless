@@ -1,6 +1,6 @@
-require_relative 'cvml'
+require_relative 'lib/jobless'
 
-CVML.create do
+Jobless.cv do
   name "Filip Defar"
   email "dabrorius@gmail.com"
   location "Zagreb, Croatia"
