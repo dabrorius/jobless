@@ -2,7 +2,7 @@ require 'erb'
 
 module Jobless
   class Document
-    attr_reader :groups
+    attr_reader :groups, :data
 
     def initialize
       @data = {}
