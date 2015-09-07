@@ -11,6 +11,7 @@ CVML.create do
       title "Full­stack Rails developer"
       company "DirectVest"
       technologies "Ruby, Ruby on Rails, Javascript"
+      homepage "http://google.com"
       description "Created an API wrapper to a Folio Institutional service. Created a full test suite for existing features. Refactored the application (From 1.5 to 3.9+ GPA on CodeClimate). Created multistep forms for the investment process. Created a dashboard that heavily relies on external APIs, as well as low level caching for increased performance."
       start_date "June 2015"
       end_date "Current"
@@ -27,7 +28,7 @@ CVML.create do
       title "Full­stack Rails developer"
       company "ThinkCERCA"
       technologies "Ruby, Ruby on Rails, Javascript"
-      description "I worked in a team with 5­8 other developers. My job consisted of maintaining, improving and adding new feature to existing Rails, backbone.js and Ember.js code."
+      description "I worked in a team with 6 other developers. My job consisted of maintaining, improving and adding new feature to existing Rails, backbone.js and Ember.js code."
       start_date "July 2014"
       end_date "Februrary 2015"
     end
