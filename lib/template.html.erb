@@ -77,6 +77,13 @@
               </p>
             <% end %>
             <p><%= item.description %></p>
+            <% if item.bulletins %>
+              <ul>
+                <% item.bulletins.each do |bulletin| %>
+                  <li><%= bulletin %></li>
+                <% end %>
+              </ul>
+            <% end %>
             <div class="time-span">
               <%= item.start_date %>
               <% if item.end_date %> - <%= item.end_date %> <% end %>

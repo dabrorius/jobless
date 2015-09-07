@@ -1,9 +1,10 @@
 module Jobless
   class Item
-    attr_reader :data
+    attr_reader :data, :bulletins
 
     def initialize
       @data = {}
+      @bulletins = []
     end
 
     # Define methods for setting personal data
@@ -15,6 +16,10 @@ module Jobless
           @data[attribute_name.to_sym]
         end
       end
+    end
+
+    def bulletin(content)
+      @bulletins.push content
     end
   end
 end

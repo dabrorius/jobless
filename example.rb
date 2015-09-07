@@ -18,6 +18,8 @@ Jobless.cv do
         "Created multistep forms for the investment process. "\
         "Created a dashboard that heavily relies on external APIs, "\
         "as well as low level caching for increased performance."
+      bulletin "Item 1"
+      bulletin "Item 2"
       start_date "June 2015"
       end_date "Current"
     end
