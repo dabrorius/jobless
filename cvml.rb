@@ -77,7 +77,7 @@ module CVML
     end
 
     # Define methods for setting personal data
-    %w(title company technologies description start_date end_date).each do |attribute_name|
+    %w(title company homepage technologies description start_date end_date).each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute

@@ -1,12 +1,19 @@
 <h1><%= name %></h1>
 <h2><%= email %></h2>
+<p><%= location %></p>
+<a href="<%= homepage %>"><%= homepage %></a>
 
 <% groups.each do |group| %>
   <h3> <%= group.name %> </h3>
   <% group.items.each do |item| %>
     <hr>
-    <%= item.title %> <br/>
+    <%= item.title %> 
+    <a href="<%= item.homepage %>"><%= item.homepage %></a>
+    <br/>
+    <%= item.technologies %>
     <%= item.company %>
+    <p><%= item.description %></p>
+    <%= item.start_date %> - <%= item.end_date %>
   <% end %>
 <% end %>
 
