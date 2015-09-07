@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative "../lib/jobless.rb"
+
+command = ARGV[0]
+
+case command
+when 'new'
+  Jobless.generate_resume
+when 'template'
+  Jobless.generate_template
+else
+  Jobless.help
+end
