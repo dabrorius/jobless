@@ -1,4 +1,5 @@
 require 'document'
+require 'group'
 
 describe Jobless::Document do
   let(:document) { Jobless::Document.new }
@@ -43,5 +44,54 @@ describe Jobless::Document do
     end
   end
 
+  describe '#group' do
+    it 'creates a new group' do
+      expect do
+        document.group 'Experience' do
+        end
+      end.to change { document.groups.count }.from(0).to(1)
+      expect(document.groups[0].name).to eq 'Experience'
+    end
+  end
+
+  describe '#employment' do
+    it 'creates a new group' do
+      expect do
+        document.employment do
+        end
+      end.to change { document.groups.count }.from(0).to(1)
+      expect(document.groups[0].name).to eq 'Employment'
+    end
+  end
+
+  describe '#education' do
+    it 'creates a new group' do
+      expect do
+        document.education do
+        end
+      end.to change { document.groups.count }.from(0).to(1)
+      expect(document.groups[0].name).to eq 'Education'
+    end
+  end
+
+  describe '#open_source' do
+    it 'creates a new group' do
+      expect do
+        document.open_source do
+        end
+      end.to change { document.groups.count }.from(0).to(1)
+      expect(document.groups[0].name).to eq 'Open source'
+    end
+  end
+
+  describe '#other_experience' do
+    it 'creates a new group' do
+      expect do
+        document.other_experience do
+        end
+      end.to change { document.groups.count }.from(0).to(1)
+      expect(document.groups[0].name).to eq 'Other experience'
+    end
+  end
 end
 

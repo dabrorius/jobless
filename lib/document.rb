@@ -36,7 +36,7 @@ module Jobless
     end
 
     def open_source(&block)
-      group("Open source contributions", :open_source, &block)
+      group("Open source", :open_source, &block)
     end
 
     def other_experience(&block)
