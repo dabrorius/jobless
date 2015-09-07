@@ -7,6 +7,7 @@ module Jobless
     def initialize
       @data = {}
       @groups = []
+      @template = File.expand_path("../template.html.erb", __FILE__)
     end
 
     # Define methods for setting personal data
@@ -42,13 +43,12 @@ module Jobless
       group("Other experience", :other_experience, &block)
     end
 
+    def template(template)
+      @template = template
+    end
+
     def write_to_file(filename)
-      if File.file?("template.html.erb")
-        template_path = "template.html.erb"
-      else
-        template_path = File.expand_path("../template.html.erb", __FILE__)
-      end
-      renderer = ERB.new(File.read(template_path))
+      renderer = ERB.new(File.read(@template))
       generated_html = renderer.result(binding)
       File.open(filename, 'w') do |file|
         file.write(generated_html)

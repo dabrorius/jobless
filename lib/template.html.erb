@@ -4,50 +4,48 @@
     <style>
       @media screen {
         body {
-          padding: 0 10em 5em;
+          padding: 0 10% 5em;
         }
       }
       body {
-        font-family: helvetica;
         color: #333;
+        font-family: helvetica;
       }
       h1, h2, h3, .title {
-        font-family: helvetica;
         color: #000;
+        font-family: helvetica;
       }
       h1 {
-        margin-top: 20px;
         float: left;
         font-size: 50px;
+        margin-top: 20px;
       }
       h3 {
-        margin-top: 3em;
         border-bottom: 3px solid #bbb;
-        padding-bottom: 0.25em;
         font-size: 26px;
-        margin-bottom: 0.5em;
+        margin-top: 3em 0 0.25em 0;
       }
       .technologies {
+        font-size: 14px;
         font-style: italic;
         margin-top: 0;
-        font-size: 14px;
       }
       .time-span {
         position: absolute;
-        top: 0;
         right: 0;
+        top: 0;
       }
       .item {
-        position: relative;
         border-bottom: 1px solid #ddd;
         margin-bottom: 1em;
+        position: relative;
       }
       .homepage {
         font-size: 14px;
       }
       .personal-info {
-        margin-top: 20px;
         float: right;
+        margin-top: 20px;
         text-align: right;
       }
     </style>
@@ -60,6 +58,7 @@
       <a href="<%= homepage %>"><%= homepage %></a>
     </div>
     <div style="clear:both;"></div>
+
     <% groups.each do |group| %>
       <div class="group">
         <h3> <%= group.name %> </h3>
