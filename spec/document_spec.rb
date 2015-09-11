@@ -55,42 +55,38 @@ describe Jobless::Document do
   end
 
   describe '#employment' do
-    it 'creates a new group' do
-      expect do
-        document.employment do
-        end
-      end.to change { document.groups.count }.from(0).to(1)
-      expect(document.groups[0].name).to eq 'Employment'
+    it 'calls #group with appropriate parameters' do
+      expect(document).to receive(:group).
+        with("Employment", :employment).and_yield
+      document.employment do
+      end
     end
   end
 
   describe '#education' do
-    it 'creates a new group' do
-      expect do
-        document.education do
-        end
-      end.to change { document.groups.count }.from(0).to(1)
-      expect(document.groups[0].name).to eq 'Education'
+    it 'calls #group with appropriate parameters' do
+      expect(document).to receive(:group).
+        with("Education", :education).and_yield
+      document.education do
+      end
     end
   end
 
   describe '#open_source' do
-    it 'creates a new group' do
-      expect do
-        document.open_source do
-        end
-      end.to change { document.groups.count }.from(0).to(1)
-      expect(document.groups[0].name).to eq 'Open source'
+    it 'calls #group with appropriate parameters' do
+      expect(document).to receive(:group).
+        with("Open source", :open_source).and_yield
+      document.open_source do
+      end
     end
   end
 
   describe '#other_experience' do
-    it 'creates a new group' do
-      expect do
-        document.other_experience do
-        end
-      end.to change { document.groups.count }.from(0).to(1)
-      expect(document.groups[0].name).to eq 'Other experience'
+    it 'calls #group with appropriate parameters' do
+      expect(document).to receive(:group).
+        with("Other experience", :other_experience).and_yield
+      document.other_experience do
+      end
     end
   end
 end
