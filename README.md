@@ -27,7 +27,19 @@ end
 
 You can see a larger source example [here](https://github.com/dabrorius/jobless/blob/master/example.rb) which gets compiled into [this](http://dabrorius.github.io/cv.html).
 
-## Personal info
+## Installation
+
+You can install jobless via RubyGems
+
+```
+gem install jobless
+```
+
+Then just create a new ruby file, require jobless and start coding. When you
+run that file your CV will be generated.
+
+## Available keywords
+### Personal info
 Following keywords are available on top level:
 * name
 * email
@@ -35,9 +47,9 @@ Following keywords are available on top level:
 * address
 * homepage
 
-## Groups and entries
+### Groups and entries
 Key part of a CV are lists of you archievements grouped in different categories.
-You can add groups of entries to your CV with _group_ keyword. Each group consists
+You can add groups to your CV with _group_ keyword. Each group consists
 of multiple entries
 
 ```ruby
@@ -47,8 +59,7 @@ group "Group title" do
 end
 ```
 
-For convenience Jobless provides several keywords with pre-defined titles.
-* group
+For convenience, Jobless provides several keywords with pre-defined titles.
 * employment
 * education
 * open_source
@@ -62,9 +73,10 @@ education do
 end
 ```
 
-## Entry (Item)
+### Entry
 Entry describes one instance of your experience. For example one job position or
 open source project.
+Following keywords are available for each entry.
 
 * title
 * company
