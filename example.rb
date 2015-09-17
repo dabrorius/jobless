@@ -10,9 +10,9 @@ Jobless.cv do
   employment do
     entry do
       title "Full-stack Rails developer"
-      company "DirectVest"
+      company "Blue Stout"
+      homepage "http://bluestout.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
-      homepage "http://google.com"
       bulletin "Created a wrapper for Folio Institutional API."
       bulletin "Created a full test suite for existing features."
       bulletin "Refactored the application (From 1.5 to 3.9+ GPA on CodeClimate)."
@@ -25,8 +25,9 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "BizRevr"
+      homepage "https://www.bizrevr.com/"
       technologies "Ruby, Ruby on Rails, Elasticsearch"
-      bulletin "Helping design and develop new features. "
+      bulletin "Helped design and develop new features. "
       bulletin "Created an interface for bulk editing records similar to excel "\
         "spreadsheet."
       start_date "April 2015"
@@ -35,6 +36,7 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "ThinkCERCA"
+      homepage "http://www.thinkcerca.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
       description "I worked in a team with 6 other developers. "\
         "My job consisted of maintaining, improving and adding new feature to "\
@@ -45,8 +47,9 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "CampWire"
+      homepage "https://www.campwire.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
-      bulletin "I created a working payment system with Stripe. "
+      bulletin "Created a working payment system with Stripe. "
       bulletin "Wrote a full test suite for existing application." 
       bulletin "Maintained and refactored existing code."
       bulletin "Introduced new developers to the application."
