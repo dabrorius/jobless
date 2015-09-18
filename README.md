@@ -90,8 +90,8 @@ They can also have multiple __bulletin__ keywords, each of which will be rendere
 as one bulletin item.
 
 ## Style
-If you don't like the default style, you can provide your custom stylsheet to
-be embedded in the CV.
+If you don't like the default style, you can provide your custom stylesheet to
+be used in the CV.
 
 ```ruby
 Jobless.cv do
