@@ -99,8 +99,4 @@ Jobless.cv do
   email "john.doe@gmail.com"
   stylesheet "my_awesome_style.css"
 end
-
-
-
-
-
+```
