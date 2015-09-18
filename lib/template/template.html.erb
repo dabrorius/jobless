@@ -3,52 +3,7 @@
     <title>CV</title>
     <meta charset="utf-8">
     <style>
-      @media screen {
-        body {
-          padding: 0 10% 5em;
-        }
-      }
-      body {
-        color: #333;
-        font-family: helvetica;
-      }
-      h1, h2, h3, .title {
-        color: #000;
-        font-family: helvetica;
-      }
-      h1 {
-        float: left;
-        font-size: 50px;
-        margin-top: 20px;
-      }
-      h3 {
-        border-bottom: 3px solid #bbb;
-        font-size: 26px;
-        margin-top: 3em 0 0.25em 0;
-      }
-      .technologies {
-        font-size: 14px;
-        font-style: italic;
-        margin-top: 0;
-      }
-      .time-span {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      .item {
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 1em;
-        position: relative;
-      }
-      .homepage {
-        font-size: 14px;
-      }
-      .personal-info {
-        float: right;
-        margin-top: 20px;
-        text-align: right;
-      }
+      <%= css %>
     </style>
   </head>
   <body>
@@ -62,7 +17,7 @@
     <div style="clear:both;"></div>
 
     <% groups.each do |group| %>
-      <div class="group">
+      <div class="group <%= group.type %>">
         <h3> <%= group.name %> </h3>
         <% group.items.each do |item| %>
           <div class="item">

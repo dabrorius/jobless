@@ -7,7 +7,8 @@ module Jobless
     def initialize
       @data = {}
       @groups = []
-      @template = File.expand_path("../template.html.erb", __FILE__)
+      @template = File.expand_path("../template/template.html.erb", __FILE__)
+      @stylesheet = File.expand_path("../template/style.css", __FILE__)
     end
 
     # Define methods for setting personal data
@@ -45,6 +46,14 @@ module Jobless
 
     def template(template)
       @template = template
+    end
+
+    def stylesheet(file_path)
+      @stylesheet = file_path
+    end
+
+    def css
+      File.read(@stylesheet)
     end
 
     def write_to_file(filename)

@@ -87,4 +87,15 @@ describe Jobless do
       expect(file_content).to include('August 2015')
     end
   end 
+
+  describe "custom CSS" do
+    before do
+      Jobless.cv('test_cv.html') do
+        stylesheet File.expand_path("../fixtures/custom_style.css", __FILE__)
+      end
+    end
+    it "embeds specified stylesheet" do
+      expect(file_content).to include('border: 1px solid black;')
+    end
+  end
 end

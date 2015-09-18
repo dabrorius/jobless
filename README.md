@@ -89,6 +89,16 @@ Following keywords are available for each entry.
 They can also have multiple __bulletin__ keywords, each of which will be rendered
 as one bulletin item.
 
+## Style
+If you don't like the default style, you can provide your custom stylsheet to
+be embedded in the CV.
+
+```ruby
+Jobless.cv do
+  name "John Doe"
+  email "john.doe@gmail.com"
+  stylesheet "my_awesome_style.css"
+end
 
 
 
