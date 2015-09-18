@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'jobless'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = Date.today.to_s
   s.summary     = 'Generate your CV with Ruby'
   s.description = 'Jobless is a simple DSL for creating a CV in HTML format.'
@@ -10,7 +10,8 @@ Gem::Specification.new do |s|
                    'lib/document.rb',
                    'lib/group.rb',
                    'lib/item.rb',
-                   'lib/template.html.erb']
+                   'lib/template/style.css',
+                   'lib/template/template.html.erb']
   s.homepage    = 'https://github.com/dabrorius/jobless'
   s.license     = 'MIT'
 end
