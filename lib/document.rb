@@ -3,6 +3,8 @@ require 'erb'
 module Jobless
   class Document
     attr_reader :groups, :data
+    PERSONAL_DATA_METHODS = %w(name location address homepage email date_of_birth)
+    SIDE_INFORMATION = PERSONAL_DATA_METHODS - ["name"]
 
     def initialize
       @data = {}
@@ -11,7 +13,7 @@ module Jobless
     end
 
     # Define methods for setting personal data
-    %w(name location address homepage email).each do |attribute_name|
+    PERSONAL_DATA_METHODS.each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute

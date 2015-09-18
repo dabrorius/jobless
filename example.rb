@@ -50,7 +50,7 @@ Jobless.cv do
       homepage "https://www.campwire.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
       bulletin "Created a working payment system with Stripe. "
-      bulletin "Wrote a full test suite for existing application." 
+      bulletin "Wrote a full test suite for existing application."
       bulletin "Maintained and refactored existing code."
       bulletin "Introduced new developers to the application."
       start_date "February 2013"
@@ -92,7 +92,7 @@ Jobless.cv do
         "for creating REST-like APIs in Ruby."
     end
   end
-  
+
   other_experience do
     entry do
       title "CatMe iOS App"

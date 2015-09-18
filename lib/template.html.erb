@@ -54,10 +54,9 @@
   <body>
     <h1><%= name %></h1>
     <div class="personal-info">
-      <% if email %><%= email %></br><% end %>
-      <% if location %><%= location %></br><% end %>
-      <% if address %><%= address %></br><% end %>
-      <% if homepage %><a href="<%= homepage %>"><%= homepage %></a><% end %>
+      <% SIDE_INFORMATION.each do |method| %>
+          <%= send(method) %></br>
+      <% end %>
     </div>
     <div style="clear:both;"></div>
 

@@ -1,4 +1,4 @@
-require_relative 'lib/jobless'
+require'jobless'
 
 Jobless.cv do
   name "John Doe"
