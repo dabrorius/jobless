@@ -4,6 +4,7 @@ module Jobless
   class Document
     attr_reader :groups, :data
     PERSONAL_DATA_METHODS = %w(name location address homepage email date_of_birth)
+    SIDE_INFORMATION = PERSONAL_DATA_METHODS - ["name"]
 
     def initialize
       @data = {}

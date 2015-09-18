@@ -54,8 +54,8 @@
   <body>
     <h1><%= name %></h1>
     <div class="personal-info">
-      <% PERSONAL_DATA_METHODS.each do |method| %>
-        <%= send(method) %></br>
+      <% SIDE_INFORMATION.each do |method| %>
+          <%= send(method) %></br>
       <% end %>
     </div>
     <div style="clear:both;"></div>
