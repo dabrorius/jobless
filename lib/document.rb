@@ -37,11 +37,11 @@ module Jobless
     end
 
     def open_source(&block)
-      group("Open source", :open_source, &block)
+      group("Open Source", :open_source, &block)
     end
 
     def other_experience(&block)
-      group("Other experience", :other_experience, &block)
+      group("Other Experience", :other_experience, &block)
     end
 
     def template(template)
