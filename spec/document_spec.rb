@@ -75,7 +75,7 @@ describe Jobless::Document do
   describe '#open_source' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Open source", :open_source).and_yield
+        with("Open Source", :open_source).and_yield
       document.open_source do
       end
     end
@@ -84,7 +84,7 @@ describe Jobless::Document do
   describe '#other_experience' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Other experience", :other_experience).and_yield
+        with("Other Experience", :other_experience).and_yield
       document.other_experience do
       end
     end
