@@ -12,6 +12,7 @@ describe Jobless do
         address 'Candy Street 9'
         homepage 'http://google.com'
         email 'mail@example.com'
+        picture 'picture.jpeg'
       end
     end
 
@@ -33,6 +34,10 @@ describe Jobless do
 
     it "embeds email" do
       expect(file_content).to include('mail@example.com')
+    end
+
+    it 'embeds picture' do
+      expect(file_content).to include('picture.jpeg')
     end
   end
 
@@ -86,7 +91,7 @@ describe Jobless do
     it "embeds end date" do
       expect(file_content).to include('August 2015')
     end
-  end 
+  end
 
   describe "custom CSS" do
     before do

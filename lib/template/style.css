@@ -21,6 +21,10 @@ h3 {
   font-size: 26px;
   margin-top: 3em 0 0.25em 0;
 }
+img {
+  width: 100px;
+  float: left;
+}
 .technologies {
   font-size: 14px;
   font-style: italic;

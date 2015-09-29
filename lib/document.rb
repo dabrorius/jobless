@@ -12,7 +12,7 @@ module Jobless
     end
 
     # Define methods for setting personal data
-    %w(name location address homepage email).each do |attribute_name|
+    %w(name location address homepage email picture).each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
