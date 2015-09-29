@@ -44,6 +44,14 @@ describe Jobless::Document do
     end
   end
 
+  describe '#picture' do
+    it 'stores correct value' do
+      document.picture 'picture.jpeg'
+      expect(document.data).to eq(picture: 'picture.jpeg')
+      expect(document.picture).to eq('picture.jpeg')
+    end
+  end
+
   describe '#group' do
     it 'creates a new group' do
       expect do

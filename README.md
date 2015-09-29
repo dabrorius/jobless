@@ -47,6 +47,16 @@ Following keywords are available on top level:
 * address
 * homepage
 
+### Picture
+If you want to add your picture or a logo next to your name, you can use the keyword picture (providing a path on your computer or an url)
+```ruby
+Jobless.cv do
+  name "John Doe"
+  email "john.doe@gmail.com"
+  picture "~/Pictures/John-Doe.jpg"
+end
+```
+
 ### Groups and entries
 Key part of a CV are lists of you archievements grouped in different categories.
 You can add groups to your CV with _group_ keyword. Each group consists
