@@ -38,6 +38,11 @@ gem install jobless
 Then just create a new ruby file, require jobless and start coding. When you
 run that file your CV will be generated.
 
+## How to start?
+
+The best way to start is by forking the [example repository](https://github.com/dabrorius/jobless-example).
+It's convinient because you can use your GitHub repo to store the CV.
+
 ## Available keywords
 ### Personal info
 Following keywords are available on top level:
