@@ -106,4 +106,13 @@ Jobless.cv do
       homepage "http://stackoverflow.com/users/735143/dabrorius"
     end
   end
+
+  references do
+    entry do
+      title "Herpidus Derpidus"
+      homepage "breadfish.co.uk"
+      description "Herpidus was my mentor for many years"
+    end
+  end
+
 end
