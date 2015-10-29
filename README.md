@@ -69,6 +69,7 @@ For convenience, Jobless provides several keywords with pre-defined titles.
 * education
 * open_source
 * other_experience
+* references
 
 ```ruby
 education do

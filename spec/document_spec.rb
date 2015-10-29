@@ -89,5 +89,15 @@ describe Jobless::Document do
       end
     end
   end
+
+  describe '#references' do
+    it 'calls #group with appropriate parameters' do
+      expect(document). to receive(:group).
+        with("References", :references).and_yield
+      document.references do
+      end
+    end
+  end
+
 end
 

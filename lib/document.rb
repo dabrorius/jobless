@@ -43,6 +43,10 @@ module Jobless
     def other_experience(&block)
       group("Other Experience", :other_experience, &block)
     end
+  
+    def references(&block)
+      group("References", :references, &block)
+    end
 
     def template(template)
       @template = template
