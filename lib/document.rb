@@ -13,6 +13,13 @@ module Jobless
       homepage
     )
 
+    GROUP_NAMES = %w(
+      employment
+      education
+      open_source
+      other_experience
+    )
+
     def initialize
       @data = {}
       @groups = []
@@ -36,8 +43,8 @@ module Jobless
       group.instance_eval &block
       @groups.push group
     end
-
-    %w(employment education open_source other_experience).each do |group_name|
+    
+    GROUP_NAMES.each do |group_name|
       define_method(group_name) do |&block|
         group(group_name.titleize, &block)
       end
