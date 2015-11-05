@@ -1,10 +1,12 @@
+require 'active_support/core_ext/string/inflections'
+
 module Jobless
   class Group
     attr_reader :items, :name, :type
 
     def initialize(name)
       @name = name
-      @type = name.downcase.gsub(/([^a-z0-9_]|\s)+/i, '-').gsub(/^-|-$/i, '')
+      @type = name.parameterize
       @items = []
     end
 
