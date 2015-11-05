@@ -37,20 +37,10 @@ module Jobless
       @groups.push group
     end
 
-    def employment(&block)
-      group("Employment", &block)
-    end
-
-    def education(&block)
-      group("Education", &block)
-    end
-
-    def open_source(&block)
-      group("Open Source", &block)
-    end
-
-    def other_experience(&block)
-      group("Other Experience", &block)
+    %w(employment education open_source other_experience).each do |group_name|
+      define_method(group_name) do |&block|
+        group(group_name.titleize, &block)
+      end
     end
 
     def template(template)
