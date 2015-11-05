@@ -4,6 +4,14 @@ module Jobless
   class Document
     attr_reader :groups, :data
 
+    PERSONAL_ATTRIBUTES = %w(
+      name
+      email
+      location
+      address
+      homepage
+    )
+
     def initialize
       @data = {}
       @groups = []
@@ -12,7 +20,7 @@ module Jobless
     end
 
     # Define methods for setting personal data
-    %w(name location address homepage email).each do |attribute_name|
+    PERSONAL_ATTRIBUTES.each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
