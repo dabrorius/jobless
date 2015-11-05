@@ -30,26 +30,26 @@ module Jobless
       end
     end
 
-    def group(name, type=nil, &block)
-      group = Group.new(name, type)
+    def group(name, &block)
+      group = Group.new(name)
       group.instance_eval &block
       @groups.push group
     end
 
     def employment(&block)
-      group("Employment", :employment, &block)
+      group("Employment", &block)
     end
 
     def education(&block)
-      group("Education", :education, &block)
+      group("Education", &block)
     end
 
     def open_source(&block)
-      group("Open Source", :open_source, &block)
+      group("Open Source", &block)
     end
 
     def other_experience(&block)
-      group("Other Experience", :other_experience, &block)
+      group("Other Experience", &block)
     end
 
     def template(template)

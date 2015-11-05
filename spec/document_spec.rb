@@ -57,7 +57,7 @@ describe Jobless::Document do
   describe '#employment' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Employment", :employment).and_yield
+        with("Employment").and_yield
       document.employment do
       end
     end
@@ -66,7 +66,7 @@ describe Jobless::Document do
   describe '#education' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Education", :education).and_yield
+        with("Education").and_yield
       document.education do
       end
     end
@@ -75,7 +75,7 @@ describe Jobless::Document do
   describe '#open_source' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Open Source", :open_source).and_yield
+        with("Open Source").and_yield
       document.open_source do
       end
     end
@@ -84,7 +84,7 @@ describe Jobless::Document do
   describe '#other_experience' do
     it 'calls #group with appropriate parameters' do
       expect(document).to receive(:group).
-        with("Other Experience", :other_experience).and_yield
+        with("Other Experience").and_yield
       document.other_experience do
       end
     end

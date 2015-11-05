@@ -2,9 +2,9 @@ module Jobless
   class Group
     attr_reader :items, :name, :type
 
-    def initialize(name, type=nil)
+    def initialize(name)
       @name = name
-      @type = type
+      @type = name.downcase.gsub(/([^a-z0-9_]|\s)+/i, '-').gsub(/^-|-$/i, '')
       @items = []
     end
 

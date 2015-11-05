@@ -2,7 +2,13 @@ require 'group'
 require 'item'
 
 describe Jobless::Group do
-  let(:group) { Jobless::Group.new("Experience") }
+  subject(:group) { Jobless::Group.new("Other experience") }
+
+  describe '#initialize' do
+    context 'infers type from name' do
+      it { expect(group.type).to eq('other-experience') }
+    end
+  end
 
   describe '#item' do
     it 'creates a new item' do
