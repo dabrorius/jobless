@@ -1,10 +1,12 @@
+require 'active_support/core_ext/string/inflections'
+
 module Jobless
   class Group
     attr_reader :items, :name, :type
 
-    def initialize(name, type=nil)
+    def initialize(name)
       @name = name
-      @type = type
+      @type = name.parameterize
       @items = []
     end
 

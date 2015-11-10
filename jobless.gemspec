@@ -14,5 +14,7 @@ Gem::Specification.new do |s|
                    'lib/template/template.html.erb']
   s.homepage    = 'https://github.com/dabrorius/jobless'
   s.license     = 'MIT'
+
+  s.add_runtime_dependency 'activesupport'
 end
 

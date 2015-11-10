@@ -1,8 +1,24 @@
 require 'erb'
+require 'active_support/core_ext/string/inflections'
 
 module Jobless
   class Document
     attr_reader :groups, :data
+
+    PERSONAL_ATTRIBUTES = %w(
+      name
+      email
+      location
+      address
+      homepage
+    )
+
+    GROUP_NAMES = %w(
+      employment
+      education
+      open_source
+      other_experience
+    )
 
     def initialize
       @data = {}
@@ -12,7 +28,7 @@ module Jobless
     end
 
     # Define methods for setting personal data
-    %w(name location address homepage email).each do |attribute_name|
+    PERSONAL_ATTRIBUTES.each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
@@ -22,26 +38,16 @@ module Jobless
       end
     end
 
-    def group(name, type=nil, &block)
-      group = Group.new(name, type)
+    def group(name, &block)
+      group = Group.new(name)
       group.instance_eval &block
       @groups.push group
     end
-
-    def employment(&block)
-      group("Employment", :employment, &block)
-    end
-
-    def education(&block)
-      group("Education", :education, &block)
-    end
-
-    def open_source(&block)
-      group("Open Source", :open_source, &block)
-    end
-
-    def other_experience(&block)
-      group("Other Experience", :other_experience, &block)
+    
+    GROUP_NAMES.each do |group_name|
+      define_method(group_name) do |&block|
+        group(group_name.titleize, &block)
+      end
     end
 
     def template(template)

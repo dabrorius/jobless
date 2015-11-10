@@ -2,13 +2,23 @@ module Jobless
   class Item
     attr_reader :data, :bulletins
 
+    PERSONAL_ATTRIBUTES = %w(
+      title
+      company
+      homepage
+      technologies
+      description
+      start_date
+      end_date
+    )
+
     def initialize
       @data = {}
       @bulletins = []
     end
 
     # Define methods for setting personal data
-    %w(title company homepage technologies description start_date end_date).each do |attribute_name|
+    PERSONAL_ATTRIBUTES.each do |attribute_name|
       define_method(attribute_name) do |attribute=nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
