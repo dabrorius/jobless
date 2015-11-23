@@ -1,6 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.6)
+    byebug (8.2.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -15,9 +19,17 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    safe_yaml (1.0.4)
+    vcr (2.9.3)
+    webmock (1.20.4)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   rspec
+  vcr
+  webmock

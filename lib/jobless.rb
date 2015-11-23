@@ -1,6 +1,7 @@
 require_relative 'document'
 require_relative 'group'
 require_relative 'item'
+require_relative 'errors'
 
 module Jobless
   def self.cv(filename = "cv.html", &block)

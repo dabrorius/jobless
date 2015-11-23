@@ -74,23 +74,13 @@ Jobless.cv do
   end
 
   open_source do
-    entry do
-      title "burek gem"
-      homepage "https://github.com/dabrorius/burek"
-      description "A ruby/rails gem for managing translations easy way."
-    end
-    entry do
-      title "markov-noodles"
-      homepage "https://github.com/dabrorius/markov-noodles"
-      description "Markov noodles is a minimalistic library for generating "\
-        "text using Markov chains."
-    end
-    entry do
-      title "grape"
-      homepage "https://github.com/ruby-grape/grape"
+    github_repo "dabrorius/burek"
+    github_repo "dabrorius/markov-noodles"
+    github_repo "ruby-grape/grape" do
       description "I am a contributer to grape an opinionated micro-framework "\
         "for creating REST-like APIs in Ruby."
     end
+    github_repo "dabrorius/jobless"
   end
   
   other_experience do
