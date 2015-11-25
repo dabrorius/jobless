@@ -20,7 +20,7 @@ Jobless.cv do
       bulletin "Created a dashboard that heavily relies on external APIs "\
         "as well as low level caching for increased performance."
       start_date "June 2015"
-      end_date "Current"
+      end_date "November 2015"
     end
     entry do
       title "Full-stack Rails developer"
