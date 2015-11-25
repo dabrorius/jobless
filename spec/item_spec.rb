@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'item'
 
 describe Jobless::Item do

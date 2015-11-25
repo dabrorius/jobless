@@ -94,6 +94,27 @@ Following keywords are available for each entry.
 They can also have multiple __bulletin__ keywords, each of which will be rendered
 as one bulletin item.
 
+### GitHub Repo
+GitHub Repo is a special type of entry that given a repository name will fetch
+and automatically fill in title, homepage and description via GitHub API.
+
+```ruby
+open_source do
+  github_repo 'dabrorius/jobless'
+end
+```
+
+You can also override existing or add new keywords to that entry.
+
+```ruby
+open_source do
+  github_repo 'dabrorius/jobless' do
+    description 'A different descrpition'
+    technologies 'Ruby'
+  end
+end
+```
+
 ## Style
 If you don't like the default style, you can provide your custom stylesheet to
 be used in the CV.
