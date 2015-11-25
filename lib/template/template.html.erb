@@ -7,48 +7,54 @@
     </style>
   </head>
   <body>
-    <h1><%= name %></h1>
-    <div class="personal-info">
-      <% if email %><%= email %></br><% end %>
-      <% if location %><%= location %></br><% end %>
-      <% if address %><%= address %></br><% end %>
-      <% if homepage %><a href="<%= homepage %>"><%= homepage %></a><% end %>
-    </div>
-    <div style="clear:both;"></div>
-
-    <% groups.each do |group| %>
-      <div class="group <%= group.type %>">
-        <h3> <%= group.name %> </h3>
-        <% group.items.each do |item| %>
-          <div class="item">
-            <b class="title"><%= item.title %></b>
-            <% if item.company %> - <%= item.company %> <% end %>
-            <% if item.homepage %>
-              <span class="homepage">
-              (<a href="<%= item.homepage %>"><%= item.homepage %></a>)
-              </span>
-            <% end %>
-            <% if item.technologies %>
-              <p class="technologies">
-                <%= item.technologies %>
-              </p>
-            <% end %>
-            <p><%= item.description %></p>
-            <% if item.bulletins %>
-              <ul>
-                <% item.bulletins.each do |bulletin| %>
-                  <li><%= bulletin %></li>
-                <% end %>
-              </ul>
-            <% end %>
-            <div class="time-span">
-              <%= item.start_date %>
-              <% if item.end_date %> - <%= item.end_date %> <% end %>
-            </div>
-          </div>
-        <% end %>
+    <div id="base">
+      <h1><%= name %></h1>
+      <div class="personal-info">
+        <% if email %><%= email %></br><% end %>
+        <% if location %><%= location %></br><% end %>
+        <% if address %><%= address %></br><% end %>
+        <% if homepage %><a href="<%= homepage %>"><%= homepage %></a><% end %>
       </div>
-    <% end %>
+      <div style="clear:both;"></div>
+
+      <% groups.each do |group| %>
+        <div class="flexbox <%= group.type %>">
+          <div class="group-title">
+            <h3> <%= group.name %> </h3>
+          </div>
+          <div class="group">
+            <% group.items.each do |item| %>
+              <div class="item">
+                <b class="title"><%= item.title %></b>
+                <% if item.company %> - <%= item.company %> <% end %>
+                <% if item.homepage %>
+                  <span class="homepage">
+                  (<a href="<%= item.homepage %>"><%= item.homepage %></a>)
+                  </span>
+                <% end %>
+                <% if item.technologies %>
+                  <p class="technologies">
+                    <%= item.technologies %>
+                  </p>
+                <% end %>
+                <p><%= item.description %></p>
+                <% if item.bulletins %>
+                  <ul>
+                    <% item.bulletins.each do |bulletin| %>
+                      <li><%= bulletin %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
+                <div class="time-span">
+                  <%= item.start_date %>
+                  <% if item.end_date %> - <%= item.end_date %> <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </body>
 </html>
 
