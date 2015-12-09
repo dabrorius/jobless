@@ -59,9 +59,10 @@ ul {
   text-align: right;
 }
 .flexbox {
-	display: -ms-flex;
-	display: -webkit-flex;
-	display: flex;
+  page-break-inside: avoid;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
   margin-top: 20px;
   padding-top: 10px;
 }
