@@ -1,6 +1,6 @@
-require 'jobless'
+require_relative '../lib/jobless'
 
-Jobless.cv do
+Jobless.cv "small.html" do
   name "Filip Defar"
   email "filip.defar@gmail.com"
   location "Zagreb, Croatia"
@@ -31,27 +31,6 @@ Jobless.cv do
       start_date "April 2015"
       end_date "June 2015"
     end
-    entry do
-      title "Full-stack Rails developer"
-      company "ThinkCERCA"
-      technologies "Ruby, Ruby on Rails, Javascript"
-      description "I worked on a team with six other developers. "\
-        "My job consisted of maintaining, improving and adding new features to "\
-        "existing Rails, backbone.js and Ember.js code."
-      start_date "July 2014"
-      end_date "Februrary 2015"
-    end
-    entry do
-      title "Full-stack Rails developer"
-      company "CampWire"
-      technologies "Ruby, Ruby on Rails, Javascript"
-      bulletin "I created a working payment system with Stripe. "
-      bulletin "I wrote a full test suite for the existing code." 
-      bulletin "Maintained and refactored existing code."
-      bulletin "Introduced new developers to the application."
-      start_date "February 2013"
-      end_date "July 2014"
-    end
   end
 
   education do
@@ -69,16 +48,6 @@ Jobless.cv do
     end
   end
 
-  open_source do
-    github_repo "dabrorius/jobless"
-    github_repo "dabrorius/markov-noodles"
-    github_repo "ruby-grape/grape" do
-      description "I am a contributor to grape, an opinionated micro-framework "\
-        "for creating REST-like APIs in Ruby."
-    end
-    github_repo "dabrorius/burek"
-  end
-  
   other_experience do
     entry do
       title "CatMe iOS App"
