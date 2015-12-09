@@ -28,9 +28,9 @@
                 <b class="title"><%= item.title %></b>
                 <% if item.company %> - <%= item.company %> <% end %>
                 <% if item.homepage %>
-                  <span class="homepage">
-                  (<a href="<%= item.homepage %>"><%= item.homepage %></a>)
-                  </span>
+                  <div class="homepage">
+                    <a href="<%= item.homepage %>"><%= item.homepage %></a>
+                  </div>
                 <% end %>
                 <% if item.technologies %>
                   <p class="technologies">

@@ -1,17 +1,7 @@
-@media screen {
-  #base {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 850px;
-    background-color: #fff;
-  }
-  body {
-    background-color: #222;
-  }
-}
 body {
   color: #333;
   font-family: helvetica;
+  font-size: 12px;
 }
 h1, h2, h3, .title {
   color: #000;
@@ -23,7 +13,7 @@ h1 {
   margin-top: 20px;
 }
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 0;
 }
 a, a:active, a:link, a:hover, a:visited {
@@ -73,5 +63,20 @@ ul {
 .group {
 	width: 80%;
 	padding: 10px;
+}
+@media screen {
+  #base {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    background-color: #fff;
+  }
+  body {
+    background-color: #222;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
 
