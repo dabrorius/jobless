@@ -10,8 +10,7 @@ Jobless.cv do
   employment do
     entry do
       title "Full-stack Rails developer"
-      company "Blue Stout"
-      homepage "http://bluestout.com/"
+      company "DirectVest"
       technologies "Ruby, Ruby on Rails, Javascript"
       bulletin "Created a wrapper for Folio Institutional API."
       bulletin "Created a full test suite for existing features."
@@ -25,9 +24,8 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "BizRevr"
-      homepage "https://www.bizrevr.com/"
       technologies "Ruby, Ruby on Rails, Elasticsearch"
-      bulletin "Helped design and develop new features. "
+      bulletin "Helping design and develop new features. "
       bulletin "Created an interface for bulk editing records similar to excel "\
         "spreadsheet."
       start_date "April 2015"
@@ -36,10 +34,9 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "ThinkCERCA"
-      homepage "http://www.thinkcerca.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
-      description "I worked in a team with 6 other developers. "\
-        "My job consisted of maintaining, improving and adding new feature to "\
+      description "I worked on a team with six other developers. "\
+        "My job consisted of maintaining, improving and adding new features to "\
         "existing Rails, backbone.js and Ember.js code."
       start_date "July 2014"
       end_date "Februrary 2015"
@@ -47,10 +44,9 @@ Jobless.cv do
     entry do
       title "Full-stack Rails developer"
       company "CampWire"
-      homepage "https://www.campwire.com/"
       technologies "Ruby, Ruby on Rails, Javascript"
-      bulletin "Created a working payment system with Stripe. "
-      bulletin "Wrote a full test suite for existing application." 
+      bulletin "I created a working payment system with Stripe. "
+      bulletin "I wrote a full test suite for the existing code." 
       bulletin "Maintained and refactored existing code."
       bulletin "Introduced new developers to the application."
       start_date "February 2013"
@@ -74,13 +70,13 @@ Jobless.cv do
   end
 
   open_source do
-    github_repo "dabrorius/burek"
+    github_repo "dabrorius/jobless"
     github_repo "dabrorius/markov-noodles"
     github_repo "ruby-grape/grape" do
-      description "I am a contributer to grape an opinionated micro-framework "\
+      description "I am a contributor to grape, an opinionated micro-framework "\
         "for creating REST-like APIs in Ruby."
     end
-    github_repo "dabrorius/jobless"
+    github_repo "dabrorius/burek"
   end
   
   other_experience do
