@@ -1,6 +1,6 @@
 require 'active_support/core_ext/string/inflections'
 require 'net/http'
-require 'JSON'
+require 'json'
 
 module Jobless
   class Group
