@@ -10,7 +10,7 @@ module Jobless
       description
       start_date
       end_date
-    )
+    ).freeze
 
     def initialize
       @data = {}
@@ -19,7 +19,7 @@ module Jobless
 
     # Define methods for setting personal data
     PERSONAL_ATTRIBUTES.each do |attribute_name|
-      define_method(attribute_name) do |attribute=nil|
+      define_method(attribute_name) do |attribute = nil|
         if attribute
           @data[attribute_name.to_sym] = attribute
         else

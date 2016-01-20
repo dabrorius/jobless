@@ -4,10 +4,9 @@ require_relative 'item'
 require_relative 'errors'
 
 module Jobless
-  def self.cv(filename = "cv.html", &block)
+  def self.cv(filename = 'cv.html', &block)
     instance = Document.new
-    instance.instance_eval &block
+    instance.instance_eval(&block)
     instance.write_to_file(filename)
   end
 end
-

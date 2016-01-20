@@ -14,14 +14,14 @@ module Jobless
 
     def item(&block)
       item = Item.new
-      item.instance_eval &block
-      @items.push item
+      item.instance_eval(&block)
+      @items.push(item)
     end
 
-    alias_method :entry, :item
+    alias entry item
 
     def github_repo(url, &block)
-      repo_name = url.match(/([^\/]*)\/([^\/]*)$/).captures.join("/")
+      repo_name = url.match(/([^\/]*)\/([^\/]*)$/).captures.join('/')
       repo_data = fetch_github_repo_data(repo_name)
       item = Item.new
       item.instance_eval do
@@ -29,7 +29,7 @@ module Jobless
         description repo_data['description']
         homepage repo_data['html_url']
       end
-      item.instance_eval &block if block_given?
+      item.instance_eval(&block) if block_given?
       @items.push item
     end
 
@@ -39,12 +39,12 @@ module Jobless
       url = "https://api.github.com/repos/#{repo_name}"
       uri = URI.parse(url)
       response = Net::HTTP.get_response(uri)
-      if response.code == "200"
+      if response.code == '200'
         JSON.parse(response.body)
       else
-        raise Error::GitHubApi, "GitHub API responded with an unexpected "\
+        fail(Error::GitHubApi, 'GitHub API responded with an unexpected '\
           "status: '#{response.code}', while trying to fetch following "\
-          "repository: '#{repo_name}'."
+          "repository: '#{repo_name}'.")
       end
     end
   end
