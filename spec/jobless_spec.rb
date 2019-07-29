@@ -13,6 +13,9 @@ describe Jobless do
         address 'Candy Street 9'
         homepage 'http://google.com'
         email 'mail@example.com'
+        phone '1-123-456-789'
+        github 'https://github.com/johndoe'
+        blog 'http://blog.example.com'
       end
     end
 
@@ -34,6 +37,16 @@ describe Jobless do
 
     it "embeds email" do
       expect(file_content).to include('mail@example.com')
+    end
+
+    it "embeds phone" do
+      expect(file_content).to include('1-123-456-789')
+    end
+    it "embeds github" do
+      expect(file_content).to include('https://github.com/johndoe')
+    end
+    it "embeds blog" do
+      expect(file_content).to include('http://blog.example.com')
     end
   end
 
