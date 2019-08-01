@@ -63,9 +63,9 @@ describe Jobless::Document do
 
   describe '#blog' do 
     it 'stores correct value' do 
-      document.phone 'http://blog.example.com'
+      document.blog 'http://blog.example.com'
       expect(document.data).to eq(blog: 'http://blog.example.com')
-     expect(document.blog).to eq('1-123-456-789')
+      expect(document.blog).to eq('http://blog.example.com')
     end
   end
 
@@ -123,7 +123,6 @@ describe Jobless::Document do
       end
     end
   end
-end
 
   describe '#skills' do
     it 'calls #group with appropriate parameters' do
@@ -157,3 +156,4 @@ end
       end
     end
   end
+end
