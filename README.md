@@ -6,6 +6,7 @@ Here's an example of Jobless code.
 ```ruby
 Jobless.cv do
   name "John Doe"
+  phone "(+1) 123 456 789"
   email "john.doe@gmail.com"
 
   employment do
@@ -50,7 +51,10 @@ Following keywords are available on top level:
 * email
 * location
 * address
+* phone
 * homepage
+* github
+* blog
 
 ### Groups and entries
 Key part of a CV are lists of you archievements grouped in different categories.
@@ -69,6 +73,11 @@ For convenience, Jobless provides several keywords with pre-defined titles.
 * education
 * open_source
 * other_experience
+* work_experience
+* summary
+* skills
+* projects
+* awards
 
 ```ruby
 education do

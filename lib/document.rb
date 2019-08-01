@@ -11,6 +11,9 @@ module Jobless
       location
       address
       homepage
+      phone
+      github
+      blog
     ).freeze
 
     GROUP_NAMES = %w(
@@ -18,6 +21,11 @@ module Jobless
       education
       open_source
       other_experience
+      work_experience
+      summary
+      skills
+      projects
+      awards
     ).freeze
 
     def initialize
