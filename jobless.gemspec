@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/dabrorius/jobless'
   s.license     = 'MIT'
 
-  s.add_runtime_dependency 'activesupport', '~> 4.0'
+  s.add_runtime_dependency 'activesupport', '>= 4', '< 8'
 end
 
